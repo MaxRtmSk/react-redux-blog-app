@@ -9,7 +9,7 @@ import Burger from "./BurgerMenu";
 const Navbar = styled.div`
 display: flex;
 justify-content: center;
-padding: 20px;
+padding: 15px;
 
 @media (max-width: 425px) {
   height: 6em;
@@ -90,7 +90,7 @@ display: none;
 }
 
 position: absolute;
-height: 100%;
+height: 100vh;
 width: 100%;
 
 background-color: currentColor;
@@ -106,7 +106,7 @@ animation: ${(props) =>
 `;
 
 
-const Header = () => {
+const Nav = () => {
   const [isOpen, setOpen] = useState(false);
   const [Mobiel, setMobiel] = useState(false);
 
@@ -144,4 +144,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Nav;
