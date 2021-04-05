@@ -4,7 +4,7 @@ import Container from "./BaseComponents";
 
 import bac from "../img/cartographer.png";
 
-import img from "../img/project/MemoryGame.png"
+// import img from "../img/project/MemoryGame.png"
 
 const CardsContainer = styled.div`
 
@@ -24,7 +24,8 @@ const CardsContainer = styled.div`
 `;
 
 const Card = styled.div`
-  background-color: #292929;
+  /* background-color: #292929; */
+  background-color: rgb(31, 33, 35);
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
 
   /* background-image: url(${bac}); */
@@ -52,11 +53,12 @@ const CardImg = styled.div`
   min-height: 90px;
   max-height: 130px;
   width: 100%;
-  /* background: url(${img}) no-repeat center center fixed; */
-  background: url(${img}) no-repeat 100% 100%;
-  background-size: cover;
 
+  background: ${props => `url(${props.background}) no-repeat top center`};
+  background-size: cover;
 `;
+  /* background: url(${img}) no-repeat center center fixed; */
+  /* background: {props => url(${img}) no-repeat 100% 100%}; */
 /* background-image: ${props => url(${props.img})} */
 const Img = styled.img`
   width: 100%;
@@ -205,7 +207,7 @@ const Project = ({ ...props }) => {
     <Card key={index}>
       <Title>{obj.name}</Title>
 
-      <CardImg img={obj.img}>
+      <CardImg background={obj.src}>
         {/* <Img src={obj.src} alt="" /> */}
       </CardImg>
 
