@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route } from "react-router-dom";
-import Nav from "./components/Header";
+import HeaderContent from "./components/Header";
 import Project from "./components/Project";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -45,7 +45,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header>
-          <Nav />
+          <HeaderContent />
         </Header>
         <Main>
           <Route path="/project" component={Project} exact />

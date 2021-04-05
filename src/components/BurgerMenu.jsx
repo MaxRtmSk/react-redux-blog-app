@@ -16,10 +16,13 @@ export const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  /* margin: 10px; */
   
   &:focus {
     outline: none;
   }
+
+  margin-left: ${({ isOpen }) => isOpen ? '15px' : '0px'};
   
   div {
     width: 2rem;

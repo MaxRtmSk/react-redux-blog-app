@@ -19,7 +19,7 @@ const CardsContainer = styled.div`
   ". . ."; */
 
   /* height: 100%; */
-  padding: 0px 15px 15px 15px;
+  padding: 15px 15px 50px 15px;
 
 `;
 

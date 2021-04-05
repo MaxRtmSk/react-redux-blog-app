@@ -1,74 +1,70 @@
 import { NavLink } from "react-router-dom";
 import styled, { keyframes, css } from "styled-components";
 import Container from "./BaseComponents";
-import {Squash as Hamburger} from "hamburger-react";
+import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
 import Burger from "./BurgerMenu";
 
-
 const Navbar = styled.div`
-display: flex;
-justify-content: center;
-padding: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
 
-@media (max-width: 425px) {
-  height: 6em;
-}
+  @media (max-width: 425px) {
+    height: 3em;
+  }
 `;
 
 const WrapperLink = styled.div`
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 
-@media (max-width: 425px) {
-  display: none;
-}
+  @media (max-width: 425px) {
+    display: none;
+  }
 `;
 
 const WrapperMobileLink = styled.div`
-padding-top: 20%;
-display: flex;
-justify-content: center;
+  /* padding-top: 20%; */
+  display: flex;
+  justify-content: center;
 
-@media (max-width: 425px) {
-  flex-direction: column;
-}
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 const activeClassName = "nav-item-active";
 const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
-&.${activeClassName} {
-  color: white;
-}
-font-size: 1.5em;
+  &.${activeClassName} {
+    color: white;
+  }
+  font-size: 1.5em;
 
-color: #525252;
-text-decoration: none;
-text-transform: uppercase;
-padding: 2%;
-font-size: 2em;
-font-weight: 600;
+  color: #525252;
+  text-decoration: none;
+  text-transform: uppercase;
+  /* padding: 2%; */
+  font-size: 2em;
+  font-weight: 600;
 
-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
 `;
 
 const StyledHamburger = styled.div`
-position: absolute;
-display: none;
-@media (max-width: 425px) {
-  display: block;
-}
+  position: absolute;
+  top: 14%;
+  display: none;
+  @media (max-width: 425px) {
+    display: block;
+  }
 `;
-
-////////////////
 
 const blockAnimateShow = keyframes`
 0% {
-    
-    transform:  translate(-0%,-100%)  ;
+  transform:  translate(-0%,-100%)  ;
 }
 100% {
-  
   transform:  translate(0px,0px)  ;
 }
 `;
@@ -82,34 +78,35 @@ transform:  translate(0%,-100%)  ;
 }
 `;
 
+/////////////////////////
+
 const Block = styled.div`
-display: none;
+  display: none;
+  padding-top: 100px;
 
-@media (max-width: 425px) {
-  display: block;
-}
+  @media (max-width: 425px) {
+    display: block;
+  }
 
-position: absolute;
-height: 100vh;
-width: 100%;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
 
-background-color: currentColor;
+  background-color: currentColor;
 
-animation: ${(props) =>
-  props.isOpen === true
-    ? css`
-        ${blockAnimateShow} 1s ease-in-out forwards
-      `
-    : css`
-        ${blockAnimateClose} 1s ease-in-out forwards
-      `};
+  animation: ${(props) =>
+    props.isOpen === true
+      ? css`
+          ${blockAnimateShow} 1s ease-in-out forwards
+        `
+      : css`
+          ${blockAnimateClose} 1s ease-in-out forwards
+        `};
 `;
 
-
-const Nav = () => {
+const HeaderContent = () => {
   const [isOpen, setOpen] = useState(false);
   const [Mobiel, setMobiel] = useState(false);
-
 
   return (
     <>
@@ -126,10 +123,10 @@ const Nav = () => {
           </StyledNavLink>
         </WrapperMobileLink>
       </Block>
-      <Navbar>
 
+      <Navbar>
         <StyledHamburger>
-          <Burger isOpen={isOpen} setOpen={setOpen}/>
+          <Burger isOpen={isOpen} setOpen={setOpen} />
         </StyledHamburger>
 
         <Container>
@@ -144,4 +141,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default HeaderContent;
