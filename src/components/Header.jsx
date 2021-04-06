@@ -44,7 +44,7 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   color: #525252;
   text-decoration: none;
   text-transform: uppercase;
-  /* padding: 2%; */
+  padding: 2%;
   font-size: 2em;
   font-weight: 600;
 

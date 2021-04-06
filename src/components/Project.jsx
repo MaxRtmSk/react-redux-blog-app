@@ -21,6 +21,10 @@ const CardsContainer = styled.div`
   /* height: 100%; */
   padding: 15px 15px 50px 15px;
 
+  /* @media (max-width: 425px) {
+    padding: 15px 15px 100px 15px;
+  } */
+
 `;
 
 const Card = styled.div`
@@ -50,7 +54,7 @@ const Card = styled.div`
 
 const CardImg = styled.div`
   height: 100%;
-  min-height: 90px;
+  min-height: 180px;
   max-height: 130px;
   width: 100%;
 
@@ -212,7 +216,7 @@ const Project = ({ ...props }) => {
       </CardImg>
 
       <CardContent>
-        <LabelsContainer>
+        {/* <LabelsContainer>
           {obj.tags.map((text, index) => {
             return (
               <Label key={index}>
@@ -221,7 +225,7 @@ const Project = ({ ...props }) => {
               </Label>
             );
           })}
-        </LabelsContainer>
+        </LabelsContainer> */}
         <TextCard>{obj.description}</TextCard>
       </CardContent>
       <LinkContainer>

@@ -13,7 +13,7 @@ const Header = styled.div`
 `;
 
 const Main = styled.div`
-  /* height: 100%; */
+  height: 100%;
 
   display: flex;
   justify-content: center;
