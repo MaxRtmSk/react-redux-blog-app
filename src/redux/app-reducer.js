@@ -8,8 +8,8 @@ let initialState = {
     {
       name: "Lang App",
       src: img_lang,
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. impedit similique laudantium earum eaque? Natus maiores necessitatibus aperiam sint.",
-      tags: ['react', 'typescript', 'node', 'react-routing', 'react-spring'],
+      description: "Работа в команде. Aдаптив",
+      tags: ['Работа в команде', 'Aдаптив', 'node', 'react-routing', 'react-spring'],
       link: {
         repository: "https://github.com/ratomsky/rslang",
         deployed: "https://pengu-english.netlify.app/"

@@ -90,7 +90,7 @@ const LinkContainer = styled.div`
   display: flex;
   padding: 15px;
   flex-shrink: 0;
-  justify-content: left;
+  justify-content: center;
   color: white;
   a:nth-child(1) {
     margin-right: 10px;
@@ -211,23 +211,21 @@ const Project = ({ ...props }) => {
     <Card key={index}>
       <Title>{obj.name}</Title>
 
-      <CardImg background={obj.src}>
-        {/* <Img src={obj.src} alt="" /> */}
-      </CardImg>
-
-      <CardContent>
+      <CardImg background={obj.src} />
+      
+      {/* <CardContent> */}
         {/* <LabelsContainer>
           {obj.tags.map((text, index) => {
             return (
-              <Label key={index}>
-                <span>#</span>
-                {text}
-              </Label>
+              <p>{text}</p>
+              // <Label key={index}>
+                
+              // </Label>
             );
           })}
         </LabelsContainer> */}
-        <TextCard>{obj.description}</TextCard>
-      </CardContent>
+        {/* <TextCard>{obj.description}</TextCard> */}
+      {/* </CardContent> */}
       <LinkContainer>
         <ButtonLink href={obj.link.deployed} target="_blank">
           Deploy
