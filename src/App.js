@@ -5,6 +5,7 @@ import Project from "./components/Project";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import styled from "styled-components";
+import Modal from "./components/Modal";
 
 const Header = styled.div`
   width: 100%;
@@ -21,23 +22,30 @@ const Main = styled.div`
   overflow-y: scroll;
 
   ::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.0);
-	border-radius: 10px;
-	/* background-color: grey; */
-  opacity: 0.6;
-
-}
+    -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    /* background-color: grey; */
+    opacity: 0.6;
+  }
 
   ::-webkit-scrollbar {
-	width: 5px;
-}
+    width: 5px;
+  }
 
   ::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #525252;
-  opacity: 0.5;
-}
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #525252;
+    opacity: 0.5;
+  }
+`;
+
+const ModalContainer = styled.div`
+  position: absolute;
+  left: 44%;
+  right: 0;
+  bottom: 0;
+  top: 80%;
 `;
 
 function App() {
@@ -52,6 +60,26 @@ function App() {
           <Route path="/aboutme" component={About} />
           <Route path="/contact" component={Contact} />
         </Main>
+        <Modal />
+        {/* <div
+          style={{
+            background: "red",
+            height: "100%",
+            width: "100%",
+            position: "absolute",
+            zIndex: `-1`,
+          }}
+        >
+          <div
+            style={{
+              height: "100%",
+              width: "100%",
+              position: "relative",
+            }}
+          >
+            
+          </div>
+        </div> */}
       </BrowserRouter>
     </div>
   );

@@ -11,7 +11,7 @@ const CardsContainer = styled.div`
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
   /* grid-template-rows: repeat(2, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1rem;
   /* gap: 15px 15px; */
   /* grid-template-areas:

@@ -1,9 +1,20 @@
 import img from "../img/project/MemoryGame.png"
 import img_todo from "../img/project/todolist.png"
 import img_travel from "../img/project/travelApp.png"
+import img_lang from "../img/project/lang.png"
 
 let initialState = {
   project: [
+    {
+      name: "Lang App",
+      src: img_lang,
+      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. impedit similique laudantium earum eaque? Natus maiores necessitatibus aperiam sint.",
+      tags: ['react', 'typescript', 'node', 'react-routing', 'react-spring'],
+      link: {
+        repository: "https://github.com/ratomsky/rslang",
+        deployed: "https://pengu-english.netlify.app/"
+      }
+    },
     {
       name: "Memory Game",
       src: img,
