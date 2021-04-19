@@ -108,21 +108,42 @@ const LabelsContainer = styled.div`
 `;
 
 const Label = styled.span`
-  /* font: 400 5vmax/5.5vmax sans-serif; */
-  font: 400 sans-serif;
-  border-radius: 2em;
-  /* padding: 0.025em 0.75em; */
-  margin: 2px 2px;
-  /* background: #1e90ff; */
-  color: #f1f1f1d4;
-  color: 45deg, rgba(5, 118, 255, 1) 0%, rgba(36, 248, 255, 1) 100%;
+  background: #eee;
+  background-color: crimson;
+  border-radius: 3px 0 0 3px;
+  color: white;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  ::before {
+  background: rgb(31,33,35);
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+  
+}
+::after {
+  background: rgb(31,33,35);
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #eee;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left-color: crimson; 
+}
 
-  background: -webkit-linear-gradient(#04315f, #1e90ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  span {
-    color: #f1f1f1d4;
-  }
 `;
 
 const ButtonLink = styled.a`
@@ -213,19 +234,19 @@ const Project = ({ ...props }) => {
 
       <CardImg background={obj.src} />
       
-      {/* <CardContent> */}
-        {/* <LabelsContainer>
+      <CardContent>
+        <LabelsContainer>
           {obj.tags.map((text, index) => {
             return (
-              <p>{text}</p>
-              // <Label key={index}>
-                
-              // </Label>
+              
+              <Label key={index}>
+                {text}
+              </Label>
             );
           })}
-        </LabelsContainer> */}
+        </LabelsContainer>
         {/* <TextCard>{obj.description}</TextCard> */}
-      {/* </CardContent> */}
+      </CardContent>
       <LinkContainer>
         <ButtonLink href={obj.link.deployed} target="_blank">
           Deploy

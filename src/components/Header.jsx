@@ -83,6 +83,7 @@ transform:  translate(0%,-100%)  ;
 const Block = styled.div`
   display: none;
   padding-top: 100px;
+  z-index: 5;
 
   @media (max-width: 425px) {
     display: block;
