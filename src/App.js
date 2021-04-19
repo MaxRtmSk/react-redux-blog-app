@@ -60,7 +60,7 @@ function App() {
           <Route path="/aboutme" component={About} />
           <Route path="/contact" component={Contact} />
         </Main>
-        <Modal />
+        {/* <Modal /> */}
         {/* <div
           style={{
             background: "red",
