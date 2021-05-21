@@ -15,7 +15,7 @@ let initialState = {
         "mongoDB",
         "routing",
         "material ui",
-        "react-form",
+        "redux-form",
       ],
       link: {
         repository: "https://github.com/ratomsky/rslang",
@@ -50,7 +50,7 @@ let initialState = {
       src: img_todo,
       description:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus maiores necessitatibus aperiam sint.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus maiores necessitatibus aperiam sint.",
-      tags: ["react", "typescript"],
+      tags: ["react", "redux", "typescript"],
       link: {
         repository: "https://github.com/ratomsky/react-game/tree/react-game",
         deployed: "https://ratomsky.github.io/ToDoList/",

@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Redirect} from "react-router-dom";
 import HeaderContent from "./components/Header";
 import Project from "./components/Project";
 import About from "./components/About";
@@ -56,6 +56,9 @@ function App() {
           <HeaderContent />
         </Header>
         <Main>
+          <Route exact path="/">
+            <Redirect to="/project" />
+          </Route>
           <Route path="/project" component={Project} exact />
           <Route path="/aboutme" component={About} />
           <Route path="/contact" component={Contact} />
